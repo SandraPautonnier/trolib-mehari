@@ -1,0 +1,795 @@
+<!--
+  MEHARI EDEN — Sections HTML prêtes à coller
+  ============================================
+
+  COMMENT UTILISER CE FICHIER :
+  1. Chaque section est délimitée par un commentaire de ce type :
+     <!-- ============ SECTION : NOM ============ -->
+     ... contenu ...
+     <!-- ============ /SECTION : NOM ============ -->
+  2. Dans WordPress, créer un bloc "HTML personnalisé" (bloc natif
+     Gutenberg, icône "</>") par section, et coller le contenu
+     correspondant à l'intérieur.
+  3. Chaque section est autonome : la classe "mehari-eden" est posée
+     directement sur son élément de premier niveau (header / section /
+     footer). Ne jamais couper une balise ouvrante et sa balise
+     fermante entre deux blocs différents, WordPress les casserait à
+     l'enregistrement.
+  4. Toutes les balises <img> ont un src="" vide : coller l'URL du
+     média WordPress à l'intérieur des guillemets une fois la photo
+     uploadée. L'alt et le loading sont déjà corrects, pas besoin d'y
+     toucher.
+-->
+
+
+<!-- ============ SECTION : HEADER ============ -->
+<header class="mehari-eden mehari-header">
+  <div class="mehari-header-inner">
+
+    <a href="#" class="mehari-logo">
+      trolib<span class="mehari-logo-dot">·</span>eden
+    </a>
+
+    <nav>
+      <ul class="mehari-nav">
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#couleurs">Nos EDEN</a></li>
+        <li><a href="#apropos">Le véhicule</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#activites">À Cassis</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="mehari-header-actions">
+      <!-- Remplacer par le shortcode/widget réel de GTranslate -->
+      <div class="mehari-lang-switch">FR · EN · DE</div>
+      <a href="#contact" class="btn btn-primary">Réserver</a>
+    </div>
+
+  </div>
+</header>
+<!-- ============ /SECTION : HEADER ============ -->
+
+
+<!-- ============ SECTION : HERO ============ -->
+<section class="mehari-eden mehari-hero">
+
+  <img
+    class="mehari-hero-bg"
+    src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4496_resultat.webp"
+    alt="EDEN électrique garée à Cassis"
+    loading="eager"
+  >
+
+  <div class="mehari-hero-overlay"></div>
+
+  <div class="mehari-hero-inner">
+
+    <div class="mehari-hero-badge">
+      <strong>EDEN électrique</strong>
+      <span>100% électrique · 4 places</span>
+    </div>
+
+    <div class="mehari-hero-content">
+      <div class="mehari-hero-location">Cassis · Provence</div>
+
+      <h1>La Méhari, <em>réinventée</em> en électrique.</h1>
+
+      <p>
+        L'EDEN allie le charme intemporel de 1968 à une motorisation 100%
+        électrique. Toit ouvert, cheveux au vent, Route des Crêtes : la
+        Provence comme elle se mérite.
+      </p>
+
+      <div class="mehari-hero-actions">
+        <a href="#contact" class="btn btn-light">Réserver une EDEN →</a>
+        <a href="#apropos" class="btn btn-link-light">Découvrir le véhicule</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+    MIS EN ATTENTE — sélecteur de coloris à réactiver plus tard, quand on
+    aura assez de photos pour en faire quelque chose de plus riche (idée :
+    un vrai carrousel plutôt qu'un simple bouton bascule 2 photos).
+    Code gardé tel quel ci-dessous, prêt à décommenter le moment venu
+    (il suffit de changer les URLs dans data-photo pour de vraies photos) :
+
+  <div class="mehari-hero-colorswitch" role="group" aria-label="Choisir un coloris">
+    <button type="button" class="is-active" data-photo="URL_PHOTO_GRENACHE">
+      <span class="mehari-hero-dot" style="background:#E0785A"></span>
+      Grenache
+    </button>
+    <button type="button" data-photo="URL_PHOTO_SORBET_CITRON">
+      <span class="mehari-hero-dot" style="background:#F3D34A"></span>
+      Sorbet-Citron
+    </button>
+  </div>
+  -->
+
+</section>
+
+<!--
+<script>
+document.querySelectorAll('.mehari-hero-colorswitch button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.mehari-hero-colorswitch button').forEach(function (b) {
+      b.classList.remove('is-active');
+    });
+    btn.classList.add('is-active');
+    document.querySelector('.mehari-hero-bg').src = btn.getAttribute('data-photo');
+  });
+});
+</script>
+-->
+
+
+<!-- ============ SECTION : HERO STATS ============ -->
+<section class="mehari-eden mehari-hero-stats-section">
+  <div class="mehari-container">
+    <div class="mehari-hero-stats">
+
+      <!-- Stat 1 : autonomie -->
+      <div class="mehari-hero-stat">
+        <span class="mehari-hero-stat-badge">
+          <svg class="mehari-hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="17" height="10" rx="2"/>
+            <line x1="22" y1="10" x2="22" y2="14"/>
+            <path d="M11 9l-2.5 4h3L9 17"/>
+          </svg>
+        </span>
+        <strong>90 km</strong>
+        <span>d'autonomie réelle</span>
+      </div>
+
+      <!-- Stat 2 : places / permis -->
+      <div class="mehari-hero-stat">
+        <span class="mehari-hero-stat-badge">
+          <svg class="mehari-hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="2.5"/>
+            <path d="M12 3v6.5M6.2 16.8l4.6-3.3M17.8 16.8l-4.6-3.3"/>
+          </svg>
+        </span>
+        <strong>4 places</strong>
+        <span>permis B</span>
+      </div>
+
+      <!-- Stat 3 : ancienneté / localisation -->
+      <div class="mehari-hero-stat">
+        <span class="mehari-hero-stat-badge">
+          <svg class="mehari-hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+        </span>
+        <strong>Depuis 2014</strong>
+        <span>à Cassis</span>
+      </div>
+
+      <!-- Stat 4 : shootings pro -->
+      <div class="mehari-hero-stat">
+        <span class="mehari-hero-stat-badge">
+          <svg class="mehari-hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+            <circle cx="12" cy="13.5" r="3.5"/>
+          </svg>
+        </span>
+        <strong>Hôtel Martinez</strong>
+        <span>& shootings pro</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : HERO ============ -->
+
+
+<!-- ============ SECTION : TARIFS ============ -->
+<section class="mehari-eden mehari-section" id="tarifs">
+  <div class="mehari-container">
+
+    <div class="mehari-section-head">
+      <span class="mehari-eyebrow">Formules & tarifs</span>
+      <h2>Une expérience, trois rythmes.</h2>
+      <p>
+        Au départ de Cassis, explorez les Calanques, la Route des Crêtes ou
+        les vignobles au volant d'une EDEN électrique. Le détail complet,
+        les options et les disponibilités se réservent sur notre
+        plateforme de réservation.
+      </p>
+    </div>
+
+    <div class="mehari-pricing-grid">
+
+      <!-- Carte 1 : Séjour en Provence -->
+      <div class="mehari-price-card">
+
+        <div class="mehari-price-media mehari-crossfade">
+          <img
+            src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/20260709_173622_resultat-scaled.webp"
+            alt="EDEN électrique, séjour itinérant en Provence — vue 1"
+            loading="lazy"
+          >
+          <img
+            src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4503_resultat.webp"
+            alt="EDEN électrique, séjour itinérant en Provence — vue 2"
+            loading="lazy"
+          >
+        </div>
+
+        <h3>Séjour en Provence</h3>
+        <div class="mehari-price-duration">2 à 7 jours · livraison à Cassis incluse</div>
+        <div class="mehari-price-amount">dès 135€ <small>/ jour</small></div>
+
+        <ul class="mehari-price-list">
+          <li>Livraison offerte à Cassis</li>
+          <li>Itinéraires GPS & bonnes adresses</li>
+          <li>Option livraison villes voisines</li>
+        </ul>
+
+        <div class="mehari-price-color-links">
+          <span
+            class="btn btn-soon"
+            data-rezdy-link="https://trolibcassis1.rezdy.com/771232/mehari-liberte-sejour-en-provence-2-a-7-jours-grenache"
+          >
+            Grenache — à venir
+          </span>
+          <a
+            href="https://trolibcassis1.rezdy.com/768651/mehari-liberte-sejour-en-provence-2-a-7-jours-sorbet-citron"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener"
+          >
+            Sorbet-Citron
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Carte 2 : Road Trip Signature (formule mise en avant) -->
+      <div class="mehari-price-card mehari-price-card--featured">
+
+        <div class="mehari-price-media mehari-crossfade">
+          <img
+            src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4505_resultat.webp"
+            alt="Road Trip Signature, panorama provençal — vue 1"
+            loading="lazy"
+          >
+          <img
+            src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/image00005_resultat-scaled.webp"
+            alt="Road Trip Signature, panorama provençal — vue 2"
+            loading="lazy"
+          >
+        </div>
+
+        <span class="mehari-price-badge">Notre formule la plus demandée</span>
+
+        <h3>Road Trip Signature</h3>
+        <div class="mehari-price-duration">1 jour · itinéraire guidé</div>
+        <div class="mehari-price-amount">249€ <small>/ jour</small></div>
+
+        <ul class="mehari-price-list">
+          <li>Itinéraires GPS, panoramas d'exception</li>
+          <li>Villages & vignobles traversés</li>
+          <li>Haltes gourmandes soigneusement sélectionnées</li>
+        </ul>
+
+        <div class="mehari-price-color-links">
+          <span
+            class="btn btn-soon"
+            data-rezdy-link="https://trolibcassis1.rezdy.com/771229/mehari-evasion-road-trip-signature-au-depart-de-cassis-grenache"
+          >
+            Grenache — à venir
+          </span>
+          <a
+            href="https://trolibcassis1.rezdy.com/771228/mehari-evasion-road-trip-signature-au-depart-de-cassis-sorbet-citron"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            Sorbet-Citron
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Carte 3 : Tour avec chauffeur -->
+      <div class="mehari-price-card">
+
+        <div class="mehari-price-media mehari-crossfade">
+          <img
+            src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/image000000_resultat.webp"
+            alt="Tour privé avec chauffeur, coucher de soleil — vue 1"
+            loading="lazy"
+          >
+          <img
+            src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/IMG-20260622-WA0015_resultat.webp"
+            alt="Tour privé avec chauffeur, coucher de soleil — vue 2"
+            loading="lazy"
+          >
+        </div>
+
+        <h3>Tour avec chauffeur</h3>
+        <div class="mehari-price-duration">3 heures · jusqu'à 3 personnes</div>
+        <div class="mehari-price-amount">399€ <small>/ tour</small></div>
+
+        <ul class="mehari-price-list">
+          <li>Coucher de soleil, Route des Crêtes, apéritif provençal</li>
+          <li>Vignoble AOC Cassis inclus</li>
+          <li>Récupération sur lieu de vacances (option)</li>
+        </ul>
+
+        <span
+          class="btn btn-soon"
+          data-rezdy-link="https://trolibcassis1.rezdy.com/770858/mehari-tour-3-heures-avec-chauffeur-a-cassis-sunset-route-des-cretes-et-aperitif-provencal"
+        >
+          Bientôt disponible
+        </span>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : TARIFS ============ -->
+
+
+<!-- ============ SECTION : NOS EDEN (couleurs) ============ -->
+<!--
+  Coloris encore en attente de confirmation client, NE PAS PUBLIER pour
+  l'instant (à réactiver quand confirmés) : Guimauve (douce, pétillante
+  et irrésistible), Pivoine (un concentré de charme et de bonne humeur).
+  Rosé-Piscine est réintégré ci-dessous en "à venir" car mentionné deux
+  fois dans les documents client (liste de suggestions + section
+  "Réservation phare", où il est aussi appelé "Barbapapa").
+-->
+<section class="mehari-eden mehari-section mehari-section--alt" id="couleurs">
+  <div class="mehari-container">
+
+    <div class="mehari-section-head">
+      <span class="mehari-eyebrow">Nos EDEN</span>
+      <h2>L'esprit Riviera, tout en fraîcheur.</h2>
+    </div>
+
+    <div class="mehari-color-grid">
+
+      <!-- Coloris 1 : Grenache -->
+      <div class="mehari-color-card">
+        <div class="mehari-color-swatch mehari-color-swatch--grenache">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/MEHARI-Grenache-vignobles_resultat-scaled.webp" alt="EDEN électrique coloris Grenache" loading="lazy">
+        </div>
+        <div class="mehari-color-body">
+          <h3>Grenache</h3>
+          <p>Une touche de fantaisie sous le soleil de Cassis.</p>
+        </div>
+      </div>
+
+      <!-- Coloris 2 : Sorbet-Citron -->
+      <div class="mehari-color-card">
+        <div class="mehari-color-swatch mehari-color-swatch--citron">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4617_resultat.webp" alt="EDEN électrique coloris Sorbet-Citron" loading="lazy">
+        </div>
+        <div class="mehari-color-body">
+          <h3>Sorbet-Citron</h3>
+          <p>L'esprit Riviera, tout en fraîcheur.</p>
+        </div>
+      </div>
+
+      <!-- Coloris 3 : Rosé-Piscine (à venir) -->
+      <div class="mehari-color-card mehari-color-card--soon">
+        <div class="mehari-color-swatch mehari-color-swatch--rose-piscine">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/image00001_resultat-scaled.webp" alt="EDEN électrique coloris Rosé-Piscine" loading="lazy">
+        </div>
+        <span class="mehari-color-badge">à venir</span>
+        <div class="mehari-color-body">
+          <h3>Rosé-Piscine</h3>
+          <p>L'été provençal à ciel ouvert.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : NOS EDEN ============ -->
+
+
+<!-- ============ SECTION : RÉSERVATION PHARE ============ -->
+<section class="mehari-eden mehari-section">
+  <div class="mehari-container">
+    <div class="mehari-featured">
+
+      <div>
+        <span class="mehari-eyebrow" style="color:#fff;opacity:.8;">Réservation phare</span>
+
+        <h3>Le Road Trip Signature, notre formule à la journée.</h3>
+
+        <p>
+          Une journée complète pour relier la Route des Crêtes, le Cap
+          Canaille et les vignobles AOC Cassis, avec pause baignade en
+          chemin. Disponible dans nos deux coloris.
+        </p>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <span
+            class="btn btn-soon"
+            data-rezdy-link="https://trolibcassis1.rezdy.com/771229/mehari-evasion-road-trip-signature-au-depart-de-cassis-grenache"
+            style="border-color:rgba(255,255,255,0.4);color:#fff;"
+          >
+            Grenache — à venir
+          </span>
+          <a
+            href="https://trolibcassis1.rezdy.com/771228/mehari-evasion-road-trip-signature-au-depart-de-cassis-sorbet-citron"
+            class="btn btn-light"
+            target="_blank"
+            rel="noopener"
+          >
+            Réserver en Sorbet-Citron →
+          </a>
+        </div>
+      </div>
+
+      <div class="mehari-featured-media">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4496_resultat.webp"
+          alt="EDEN électrique garée face au Cap Canaille"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : RÉSERVATION PHARE ============ -->
+
+
+<!-- ============ SECTION : LE VÉHICULE ============ -->
+<section class="mehari-eden mehari-section mehari-section--alt" id="apropos">
+  <div class="mehari-container">
+    <div class="mehari-specs-grid">
+
+      <div>
+        <span class="mehari-eyebrow">Le véhicule</span>
+
+        <h2>L'âme de 1968, la technologie d'aujourd'hui.</h2>
+
+        <p>
+          L'EDEN conserve le charme intemporel de la Méhari tout en
+          intégrant les standards actuels de confort et de sécurité. Une
+          conduite silencieuse, souple et résolument tournée vers le
+          plaisir.
+        </p>
+
+        <ul class="mehari-spec-list">
+          <li><strong>100% électrique</strong><span>Motorisation</span></li>
+          <li><strong>4 places</strong><span>Places</span></li>
+          <li><strong>~90 km</strong><span>Autonomie réelle</span></li>
+          <li><strong>Permis B</strong><span>Permis requis</span></li>
+        </ul>
+
+        <details class="mehari-accordion">
+          <summary>Caractéristiques techniques complètes</summary>
+          <div class="mehari-accordion-body">
+            Vitesse max : 80 km/h · Recharge simple sur prise domestique
+            220V (environ 6 heures pour une charge complète) · Circulation
+            sur autoroute interdite · Véhicule confortable et facile à
+            conduire.
+          </div>
+        </details>
+
+        <details class="mehari-accordion">
+          <summary>Lieux & itinéraires provençaux</summary>
+          <div class="mehari-accordion-body">
+            Cap Canaille & Route des Crêtes — en savoir plus auprès de
+            l'<a href="https://www.destinationlaciotat.com/explorer/le-parc-national-des-calanques/la-route-des-cretes/" target="_blank" rel="noopener">Office de Tourisme de La Ciotat</a>,
+            l'<a href="https://www.ot-cassis.com/explorez/le-cap-canaille-et-la-route-des-cretes/" target="_blank" rel="noopener">Office de Tourisme de Cassis</a>
+            ou le <a href="https://www.calanques-parcnational.fr/fr/cap-canaille-falaises-soubeyranes-route-des-cretes-sainte-fretouse-cassis-la-ciotat" target="_blank" rel="noopener">Parc National des Calanques</a>.
+            <br>
+            <a href="https://www.ot-cassis.com/explorez/le-vignoble/" target="_blank" rel="noopener">Vignobles AOC Cassis</a>
+            · Pauses baignade possibles à Cassis et La Ciotat.
+          </div>
+        </details>
+      </div>
+
+      <div class="mehari-specs-media">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4617_resultat.webp"
+          alt="Détail de l'habitacle de l'EDEN électrique"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : LE VÉHICULE ============ -->
+
+
+<!-- ============ SECTION : GALERIE ============ -->
+<section class="mehari-eden mehari-section" id="galerie">
+  <div class="mehari-container">
+
+    <div class="mehari-section-head">
+      <span class="mehari-eyebrow">En images</span>
+      <h2>L'EDEN, dans le détail.</h2>
+    </div>
+
+    <div class="mehari-gallery-grid">
+
+      <div class="mehari-gallery-item mehari-gallery-item--tall">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4643_resultat.webp"
+          alt="Profil avant de l'EDEN, Calanques de Cassis"
+          loading="lazy"
+        >
+        
+      </div>
+
+      <div class="mehari-gallery-item">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4614_resultat.webp"
+          alt="Poste de conduite de l'EDEN électrique"
+          loading="lazy"
+        >
+        
+      </div>
+
+      <div class="mehari-gallery-item">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4626_resultat.webp"
+          alt="Toit ouvert Margaritaville de l'EDEN"
+          loading="lazy"
+        >
+        
+      </div>
+
+      <div class="mehari-gallery-item">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A4295_resultat.webp"
+          alt="Vue trois-quarts arrière de l'EDEN"
+          loading="lazy"
+        >
+        
+      </div>
+
+      <div class="mehari-gallery-item">
+        <img
+          src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/3J5A5199_resultat.webp"
+          alt="Détail du rétroviseur de l'EDEN"
+          loading="lazy"
+        >
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : GALERIE ============ -->
+
+
+<!-- ============ SECTION : PLUS D'ACTIVITÉS ============ -->
+<section class="mehari-eden mehari-section mehari-section--alt" id="activites">
+  <div class="mehari-container">
+
+    <div class="mehari-section-head">
+      <span class="mehari-eyebrow">Plus d'activités</span>
+      <h2>L'esprit Trolib à Cassis.</h2>
+    </div>
+
+    <div class="mehari-activities-grid">
+
+      <a
+        href="https://www.trolib.com/location-de-scooter-electrique-a-cassis/"
+        class="mehari-activity-card"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="mehari-activity-media">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/scooter-electrique-schwalbe-jaune-en-location-a-Cassis-933x700_resultat.webp" alt="Scooter électrique Trolib" loading="lazy">
+        </div>
+        <h4>Scooters électriques</h4>
+        <p>Modèles GOVECS, sans expérience requise.</p>
+      </a>
+
+      <a
+        href="https://www.trolib.com/location-velo-vtt-electrique-cassis/"
+        class="mehari-activity-card"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="mehari-activity-media">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/9-350x263_resultat.webp" alt="VTT électrique Trolib" loading="lazy">
+        </div>
+        <h4>Vélos & VTT électriques</h4>
+        <p>Pour explorer les Calanques à votre rythme.</p>
+      </a>
+
+      <a
+        href="https://www.trolib.com/tours-guides-vtt-electrique-cassis-provence/"
+        class="mehari-activity-card"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="mehari-activity-media">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/4.3-Cap-Canaille-2-2048x1536_resultat.webp" alt="Tour guidé VTT électrique" loading="lazy">
+        </div>
+        <h4>Tours guidés</h4>
+        <p>En VTT électrique avec nos moniteurs diplômés.</p>
+      </a>
+
+      <a
+        href="https://www.mehariclub.com/fr/visite-de-nos-ateliers/"
+        class="mehari-activity-card"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="mehari-activity-media">
+          <img src="http://location-voiture-cassis.com/wp-content/uploads/2026/07/Balade-journee-en-Mehari-electrique-Grenache-466x311_resultat.webp" alt="Atelier 2CV Méhari Club Cassis" loading="lazy">
+        </div>
+        <h4>2CV Méhari Club</h4>
+        <p>Visitez l'atelier de notre partenaire exclusif.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : PLUS D'ACTIVITÉS ============ -->
+
+
+<!-- ============ SECTION : RÉSERVATION / CONTACT ============ -->
+<section class="mehari-eden mehari-section" id="contact">
+  <div class="mehari-container">
+
+    <div class="mehari-section-head" style="margin-bottom:3.5rem;">
+      <span class="mehari-eyebrow">Réservation</span>
+      <h2>Vous êtes prêt à prendre la route ?</h2>
+      <p>Dites-nous quand et comment vous souhaitez découvrir Cassis, nous nous occupons du reste.</p>
+    </div>
+
+    <div class="mehari-contact-grid">
+
+      <div class="mehari-agency-card">
+        <h4>Notre agence de Cassis</h4>
+        <p>
+          <a href="https://maps.app.goo.gl/5nSPpFLyNRYoEnAz8" target="_blank" rel="noopener">Piscine Cap Provence, Cassis</a>
+        </p>
+        <p><strong>+33 (0) 672 504 726</strong></p>
+        <p>Parkings gratuits à proximité</p>
+
+        <details class="mehari-accordion">
+          <summary>Venir en voiture</summary>
+          <ul class="mehari-accordion-list">
+            <li>Parking du <a href="https://maps.app.goo.gl/xBM85z2Wr3wjKjXS7" target="_blank" rel="noopener">Parc Régis Vidal</a> (à proximité)</li>
+            <li>Parking des <a href="https://maps.app.goo.gl/EcVUdQmPqsAENBSm7" target="_blank" rel="noopener">Gorguettes</a> (5 minutes de marche)</li>
+          </ul>
+        </details>
+
+        <details class="mehari-accordion">
+          <summary>Venir en transport</summary>
+          <ul class="mehari-accordion-list">
+            <li>Depuis le centre-ville : <a href="https://www.cassis.fr/gerer-mon-quotidien/transports-et-stationnements/se-deplacer-sans-voiture" target="_blank" rel="noopener">navette</a> toute l'année, arrêt "Parc Régis Vidal" à 200m</li>
+            <li>Bus, arrêt <a href="https://maps.app.goo.gl/sUCsRi2Hm8HiEHQw5" target="_blank" rel="noopener">"Font Blanche"</a> à 200m</li>
+            <li>Train, <a href="https://maps.app.goo.gl/QDAuvR5YHPNusBzd8" target="_blank" rel="noopener">gare de Cassis</a> à 2,3 km</li>
+            <li>Dépose mini-van et accès bus possible pour les groupes</li>
+          </ul>
+        </details>
+
+        <details class="mehari-accordion">
+          <summary>Conditions générales de location</summary>
+          <div class="mehari-accordion-body">
+            Les conditions générales dédiées à la location de Méhari sont
+            en cours de rédaction avec le client. En attendant, consultez
+            les <a href="https://www.trolib.com/wp-content/uploads/2018/08/CGV-LOCATION-TROLIB-FRANCAIS.pdf" target="_blank" rel="noopener">CGV Trolib en vigueur</a>.
+          </div>
+        </details>
+      </div>
+
+      <!--
+        MIS EN ATTENTE — formulaire de réservation à réactiver une fois le
+        vrai plugin de formulaire configuré (ex. Contact Form 7, Kadence
+        Forms...). Code gardé tel quel ci-dessous, prêt à décommenter :
+        en réappliquant les classes .mehari-field / .mehari-form-grid sur
+        les champs générés par le plugin si besoin.
+
+      <form class="mehari-form-grid" action="#" method="post">
+
+        <div class="mehari-field">
+          <label for="mehari-name">Nom complet</label>
+          <input type="text" id="mehari-name" name="name" required>
+        </div>
+
+        <div class="mehari-field">
+          <label for="mehari-email">Email</label>
+          <input type="email" id="mehari-email" name="email" required>
+        </div>
+
+        <div class="mehari-field">
+          <label for="mehari-phone">Téléphone</label>
+          <input type="tel" id="mehari-phone" name="phone">
+        </div>
+
+        <div class="mehari-field">
+          <label for="mehari-formula">Formule souhaitée</label>
+          <select id="mehari-formula" name="formula">
+            <option>L'Escapade — 1-2h</option>
+            <option>La Journée Calanques</option>
+            <option>Shooting / Événement</option>
+          </select>
+        </div>
+
+        <div class="mehari-field">
+          <label for="mehari-date">Date souhaitée</label>
+          <input type="date" id="mehari-date" name="date">
+        </div>
+
+        <div class="mehari-field mehari-field--full">
+          <label for="mehari-message">Message</label>
+          <textarea id="mehari-message" name="message"></textarea>
+        </div>
+
+        <div class="mehari-field mehari-field--full">
+          <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+        </div>
+
+      </form>
+      -->
+
+    </div>
+  </div>
+</section>
+<!-- ============ /SECTION : RÉSERVATION / CONTACT ============ -->
+
+
+<!-- ============ SECTION : FOOTER ============ -->
+<footer class="mehari-eden mehari-footer">
+  <div class="mehari-container">
+
+    <div class="mehari-footer-grid">
+
+      <div>
+        <div class="mehari-logo" style="color:#fff;">
+          trolib<span class="mehari-logo-dot">·</span>eden
+        </div>
+        <p style="margin-top:12px;font-size:0.88rem;">
+          Location de Méhari électrique EDEN à Cassis, par Trolib.
+        </p>
+      </div>
+
+      <div>
+        <h5>Découvrir</h5>
+        <ul>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#couleurs">Nos EDEN</a></li>
+          <li><a href="#apropos">Le véhicule</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Trolib</h5>
+        <p style="font-size:0.82rem;margin:0 0 1em;color:rgba(255,255,255,0.6);">
+          location-voiture-cassis.com fait partie de Trolib, loueur
+          d'activités et de mobilités douces à Cassis.
+        </p>
+        <ul>
+          <li><a href="https://www.trolib.com/" target="_blank" rel="noopener">Site principal Trolib</a></li>
+          <li><a href="#activites">Toutes nos activités</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mehari-footer-bottom">
+      <span>© 2026 Trolib — Tous droits réservés</span>
+      <!-- Remplacer # par la page mentions légales dédiée une fois rédigée -->
+      <span>
+        <a href="#">Mentions légales</a> ·
+        <a href="https://www.trolib.com/wp-content/uploads/2018/08/CGV-LOCATION-TROLIB-FRANCAIS.pdf" target="_blank" rel="noopener">CGV</a>
+      </span>
+    </div>
+
+  </div>
+</footer>
+<!-- ============ /SECTION : FOOTER ============ -->
